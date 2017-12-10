@@ -36,9 +36,9 @@
     
 +   第 2 步：初始化各类项目
     
-    +   vue 项目: `bio init bio-vue`
-    +   react 项目: `bio init bio-react`
-    +   pure（非 vue 或 react） 项目: `bio init bio-pure`
+    +   vue 项目: `bio init vue` 或 `bio init bio-scaffold-vue`
+    +   react 项目: `bio init react` 或 `bio-scaffold-react`
+    +   pure（非 vue 或 react） 项目: `bio init pure` 或 `bio init bio-scaffold-pure`
 
 +   第 3 步：安装项目依赖
 
@@ -64,9 +64,9 @@
     
         bio 已经为三种脚手架取了昵称:
         
-        +   `bio-vue`: `vue`
-        +   `bio-react`: `react`
-        +   `bio-pure`: `pure`
+        +   `bio-scaffold-vue`: `vue`
+        +   `bio-scaffold-react`: `react`
+        +   `bio-scaffold-pure`: `pure`
         
         详细信息可查看：[目前可用的脚手架](./docs/cn/目前bio可用的脚手架.md)。
 
