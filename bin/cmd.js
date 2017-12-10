@@ -20,7 +20,11 @@ require('ensure-module-latest')({
     registry: 'https://registry.npmjs.org/',
     beforeInstall(cwd) {
         if (fs.existsSync(cwd)) {
-            fse.removeSync(cwd);
+            try {
+                fse.removeSync(cwd);
+            } catch(err) {
+                throw Error(err);
+            }
         }
     },
 }).then((modulePath) => {
