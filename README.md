@@ -8,6 +8,12 @@
 
 使用 bio，您将只需关注业务逻辑，无需关注脚手架、mock 等配置信息，即可快速完成前端开发。
 
+## 代码结构
+
+bio-cli 为 bio 的命令行客户端部分，负责检查核心模块更新等工作。
+
+bio-core 为 bio 核心功能模块，详情：https://github.com/weidian-inc/bio-core
+
 ## 安装
 
 +   安装 Node.js（>= 8.9.1）
@@ -20,11 +26,13 @@
     npm install bio-cli -g
     ```
 
-+   npm 源设置
++   npm 加速
 
     因为使用过程中需要通过 npm 安装一些依赖，为提高速度：
 
-    如果你是中国用户，建议切换 npm 源为 https://registry.npm.taobao.org: `npm config set registry https://registry.npm.taobao.org`
+    如果你是中国用户，建议切换 npm 源为 https://registry.npm.taobao.org: 
+    
+    `npm config set registry https://registry.npm.taobao.org`
     
 ## 快速使用
 
