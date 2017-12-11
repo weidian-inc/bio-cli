@@ -18,6 +18,9 @@
     "bin": {
         "bio": "./bin/cmd.js"
     },
+    "engines": {
+        "node": ">=8.9.1"
+    },
     "author": {
         "name": "liuyuanyang",
         "email": "liuyuanyangscript@gmail.com",
