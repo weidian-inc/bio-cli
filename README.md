@@ -92,10 +92,9 @@ bio-core 为 bio 核心功能模块，详情：https://github.com/weidian-inc/bi
         +   启动任务 `dev-daily`，并监听文件变化同步到脚手架目录：`bio run dev-daily`
         +   启动任务 `build-daily`，不监听文件变化同步到脚手架目录：`bio run build-daily -n`
 
-+   脚手架相关
++   显示本地安装的脚手架：`bio scaffold show <脚手架在 npm 源上的名称 或 在 bio 中的昵称>`
 
-    +   显示本地安装的脚手架：`bio scaffold show <脚手架在 npm 源上的名称 或 在 bio 中的昵称>`
-    +   创建脚手架 demo：`bio scaffold create`
++   创建脚手架 demo：`bio scaffold create`
     
 +   mock：`bio mock [端口]`，默认端口是 7000
 
