@@ -1,5 +1,9 @@
 # 开发bio脚手架
 
+## 案例
+
+这是一个脚手架的 demo：https://github.com/weidian-inc/bio-scaffold-demo
+
 ## 原理
 
 +   bio 通过 npm 获取脚手架及拉取更新。
@@ -67,3 +71,27 @@
 
         +   `project-template/mobile/...`
         +   `project-template/pc/...`
+
++   第三步：将脚手架置于目录：`~/.bio/scaffold` 下，并安装各项依赖
+
+    这样 bio 就可以找到该脚手架了
+
+## 测试脚手架
+
++   测试模板功能
+
+    进入一个空目录，执行命令：`bio init <脚手架名称>`，bio 会拉取 `~/.bio/scaffold` 目录下的脚手架中 `project-template/` 下的项目模板
+
++   测试脚手架编译功能
+
+    通过命令：`v run <taskName>` 启动脚手架任务，执行各种任务
+
+## 发布脚手架
+
+bio 通过 npm 获取脚手架，可以在 bio 的子模块 [bio-core/bin/cmd](https://github.com/weidian-inc/bio-core/blob/master/bin/cmd.js#L29) 中指定 npm 源。
+
+所以，脚手架的发布也是通过 npm 托管，执行命令 `npm publish` 即可。
+
+bio 始终会检查脚手架是否有更新，并自动更新最新脚手架。
+
+如果脚手架只是在本地测试没有发布，bio 会跳过检查更新，便于本地测试。
