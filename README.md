@@ -164,7 +164,3 @@ bio-core 为 bio 核心功能模块，详情：https://github.com/weidian-inc/bi
 ## LICENSE
 
 MIT
-
-Copyright (C) 2017, [weidian.com](https://www.weidian.com/)
-
-All rights reserved.
