@@ -127,7 +127,7 @@
     bio lint init -t es5
     ```
 
-+   lint：`bio lint [--fix] [-w, --watch]`
++   `bio lint [--fix] [-w, --watch]`
 
     执行 lint 检查，bio 会为你生成 lint 结果页面进行查看
 
