@@ -21,7 +21,8 @@ require('ensure-module-latest')({
     beforeInstall(cwd) {
         if (fs.existsSync(cwd)) {
             try {
-                fse.removeSync(cwd);
+                console.log('检查更新');
+                // fse.removeSync(cwd);
             } catch(err) {
                 throw Error(err);
             }

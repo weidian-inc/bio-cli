@@ -8,12 +8,6 @@
 
 使用 bio，您将只需关注业务逻辑，无需关注脚手架、mock 等配置信息，即可快速完成前端开发。
 
-## 代码结构
-
-bio-cli 为 bio 的命令行客户端部分，负责检查核心模块更新等工作。
-
-bio-core 为 bio 核心功能模块，详情：https://github.com/weidian-inc/bio-core
-
 ## 安装
 
 +   安装 Node.js（>= 8.9.1）
@@ -30,13 +24,15 @@ bio-core 为 bio 核心功能模块，详情：https://github.com/weidian-inc/bi
 
     因为使用过程中需要通过 npm 安装一些依赖，为提高速度：
 
-    如果你是中国用户，建议切换 npm 源为 https://registry.npm.taobao.org: 
+    如果你是中国用户，建议切换 npm 源为 https://registry.npm.taobao.org
     
-    `npm config set registry https://registry.npm.taobao.org`
+    ```
+    npm config set registry https://registry.npm.taobao.org
+    ```
     
 ## 快速使用
 
-+   第 1 步：创建目录
++   第 1 步：创建项目目录
 
     `mkdir demo`
 
@@ -44,9 +40,9 @@ bio-core 为 bio 核心功能模块，详情：https://github.com/weidian-inc/bi
     
 +   第 2 步：初始化各类项目
     
-    +   vue 项目: `bio init vue` 或 `bio init bio-scaffold-vue`
-    +   react 项目: `bio init react` 或 `bio-scaffold-react`
-    +   pure（非 vue 或 react） 项目: `bio init pure` 或 `bio init bio-scaffold-pure`
+    +   vue 项目: `bio init bio-scaffold-vue`
+    +   react 项目: `bio-scaffold-react`
+    +   非 vue / 非 react 项目:  `bio init bio-scaffold-pure`
 
 +   第 3 步：安装项目依赖
 
@@ -62,47 +58,86 @@ bio-core 为 bio 核心功能模块，详情：https://github.com/weidian-inc/bi
 
 ## 命令集
 
-+   项目初始化: `bio init <脚手架在 npm 源上的名称 或 在 bio 中的昵称>`
++   `bio init <脚手架在 npm 源上的名称>`
 
-    +   作用
-        +   告诉 bio 当前项目在使用哪个脚手架（存储于文件 `.biorc`）。
-        +   如果当前目录是空目录（或只有 `README.md`），该命令会为目录拉取 demo 文件。
-        
-    +   昵称
+    +   功能
+
+        初始化项目目录。
+
+        该命令会完成以下动作：
+
+        1. 在本地安装脚手架，确保脚手架存在
+        2. 如果当前目录是空目录（或只有 `README.md`），该命令会为生成 demo 文件。
+
+    +   脚手架
     
-        bio 已经为三种脚手架取了昵称:
-        
-        +   `bio-scaffold-vue`: `vue`
-        +   `bio-scaffold-react`: `react`
-        +   `bio-scaffold-pure`: `pure`
-        
+        bio 目前准备了三个脚手架（`bio-scaffold-vue`、`bio-scaffold-react`、`bio-scaffold-pure`）
+
         详细信息可查看：[目前可用的脚手架](./docs/cn/目前bio可用的脚手架.md)。
 
-+   启动脚手架任务: `bio run <脚手架支持的任务> [--no-watch]`
++   `bio run <脚手架支持的任务> [-n, --no-watch]`
 
-    +   作用
+    +   功能
 
-        +   只要是脚手架支持的任务，都可以用该命令启动（[目前可用的脚手架](./docs/cn/目前bio可用的脚手架.md)、[开发bio脚手架](./docs/cn/开发bio脚手架.md)）。
-        +   **提示：**bio 默认会**启动**一个文件监听服务，同步当前目录文件到脚手架目录，保证脚手架目录与业务目录始终是父子关系（[为什么要保证父子关系?](https://github.com/hoperyy/deep-webpack/issues/8)），供脚手架编译。
+        启动脚手架任务。
 
-    +   参数
-        +   `-n, --no-watch`：**关闭**同步当前目录到脚手架目录的文件监听服务
+        bio 会启动脚手架，并透传任务名称到脚手架，以完成各类任务。
 
-    +   举例
-        +   启动任务 `dev-daily`，并监听文件变化同步到脚手架目录：`bio run dev-daily`
-        +   启动任务 `build-daily`，不监听文件变化同步到脚手架目录：`bio run build-daily -n`
+        所以，任务名称是可变的，只要脚手架支持就可以。
 
-+   显示本地安装的脚手架：`bio scaffold show <脚手架在 npm 源上的名称 或 在 bio 中的昵称>`
+        我们默认提供的三个脚手架都提供了以下 6 种任务：
+        
+        ```
+        dev-daily、dev-pre、dev-prod、build-daily、build-pre、build-prod
+        ```
 
-+   创建脚手架 demo：`bio scaffold create`
+        举例：初始化完 `bio-scaffold-vue` 项目后，启动它的 `dev-daily` 任务，命令即为：
+
+        ```
+        bio run dev-daily
+        ```
+
+    +   选项 `-n, --no-watch` 介绍：
+
+        bio 默认会 **启动** 一个文件监听服务，同步当前目录文件到脚手架目录，保证脚手架目录与业务目录始终是父子关系（[为什么要保证父子关系?](https://github.com/hoperyy/deep-webpack/issues/8)），供脚手架编译。
+
+        `-n, --no-watch` 会**关闭**同步当前目录到脚手架目录的文件监听服务
+
++   `bio scaffold show <脚手架在 npm 源上的名称>`
+
+    打开脚手架所在的目录
+
++   `bio scaffold create`
+
+    创建脚手架，会提示你新的脚手架名称
     
-+   mock：`bio mock [端口]`，默认端口是 7000
++   `bio mock [端口]`
 
-+   lint：`bio lint [--fix]`
+    启动本地 mock 服务，默认端口是 7000
 
-    `--fix` 参数会自动修正源码中的代码格式。
+    如果希望指定端口号，可以直接指定，如：`bio mock 8000`
 
-+   help：`bio help`
++   `bio lint init [-t, --type [value]]`
+
+    初始化 lint，会自动在 git commit 前挂载 lint 执行钩子
+
+    默认初始化 es6 规则，如果希望在某个目录初始化 es5 功能，可以进入该目录，执行：
+
+    ```
+    bio lint init -t es5
+    ```
+
++   lint：`bio lint [--fix] [-w, --watch]`
+
+    执行 lint 检查，bio 会为你生成 lint 结果页面进行查看
+
+    +   参数说明
+        +   `--fix`：自动修正源码中的代码格式。
+        +   `-w, --watch`：启动文件监听，文件一旦有变化，会触发 lint 检查
+
++   `bio help`
+
+    help 信息
 
 ## 特点
 
@@ -146,7 +181,7 @@ bio-core 为 bio 核心功能模块，详情：https://github.com/weidian-inc/bi
 
     +   lint
 
-        bio 提供了 lint 服务，默认使用基于 [airbnb 规范](https://github.com/airbnb/javascript) 的 [bio eslint 规范](./docs/cn/bio-eslint规范.md)，您可在项目目录重写 eslint 配置文件覆盖默认规则。
+        bio 提供了 lint 服务
 
     +   mock
 
