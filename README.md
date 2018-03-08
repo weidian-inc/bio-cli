@@ -159,7 +159,7 @@
 
     help 信息
 
-## 特点
+## bio 的特点
 
 ![](https://user-images.githubusercontent.com/5757051/37135599-e5dc2c2c-22d8-11e8-8953-8ef2a2441bc7.png)
 
