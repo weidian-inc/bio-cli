@@ -175,6 +175,12 @@
 +   [目前可用的脚手架](./docs/cn/目前bio可用的脚手架.md)
 +   [开发 bio 脚手架](./docs/cn/开发bio脚手架.md)
 
+## TODO
+
++   完善单元测试
++   持续集成
++   English Docs
+
 ## LICENSE
 
 MIT
