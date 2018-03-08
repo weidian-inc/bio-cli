@@ -75,7 +75,7 @@
         ```
         bio-scaffold-vue --> vue
         bio-scaffold-react --> react
-        bio-scaffold-pure -->
+        bio-scaffold-pure --> pure
         ```
 
         **所以所有涉及脚手架名称的命令，均可以用昵称代替。**
