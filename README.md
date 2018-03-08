@@ -95,7 +95,12 @@
         我们默认提供的三个脚手架都提供了以下 6 种任务：
         
         ```
-        dev-daily、dev-pre、dev-prod、build-daily、build-pre、build-prod
+        dev-daily
+        dev-pre
+        dev-prod
+        build-daily
+        build-pre
+        build-prod
         ```
 
         详细信息可查看：[bio 内置脚手架任务名称](./docs/cn/目前bio可用的脚手架.md)。
