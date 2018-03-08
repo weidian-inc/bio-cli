@@ -184,7 +184,7 @@
 
 ## 开发者
 
-+   Core：刘远洋
++   Core：[刘远洋](https://github.com/hoperyy)
 +   lint：丁俊杰
 
 ## LICENSE
