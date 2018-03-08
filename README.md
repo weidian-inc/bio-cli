@@ -182,6 +182,11 @@
 +   English Docs
 +   完善脚手架项目 demo
 
+## 开发者
+
++   Core：刘远洋
++   lint：丁俊杰
+
 ## LICENSE
 
 MIT
