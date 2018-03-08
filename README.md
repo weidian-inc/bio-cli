@@ -180,6 +180,7 @@
 +   完善单元测试
 +   持续集成
 +   English Docs
++   完善脚手架项目 demo
 
 ## LICENSE
 
