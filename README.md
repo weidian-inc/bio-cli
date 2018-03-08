@@ -57,14 +57,12 @@
 
         该命令会完成以下动作：
 
-        1. 在本地安装脚手架，以确保脚手架存在
-        2. 如果当前目录是空目录（或只有 `README.md`），该命令会为生成 demo 文件。
+        +   在本地安装脚手架，以确保脚手架存在
+        +   如果当前目录是空目录（或只有 `README.md`），该命令会为生成 demo 文件。
 
     +   脚手架
     
         bio 目前准备了三个脚手架（`bio-scaffold-vue`、`bio-scaffold-react`、`bio-scaffold-pure`）
-
-        详细信息可查看：[目前可用的脚手架](./docs/cn/目前bio可用的脚手架.md)。
 
 +   `bio run <脚手架支持的任务> [-n, --no-watch]`
 
@@ -81,6 +79,8 @@
         ```
         dev-daily、dev-pre、dev-prod、build-daily、build-pre、build-prod
         ```
+
+        详细信息可查看：[bio 内置脚手架任务名称](./docs/cn/目前bio可用的脚手架.md)。
 
         举例：初始化完 `bio-scaffold-vue` 项目后，启动它的 `dev-daily` 任务，命令即为：
 
