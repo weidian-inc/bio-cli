@@ -185,7 +185,7 @@
 ## 开发者
 
 +   Core：[刘远洋](https://github.com/hoperyy)
-+   lint：丁俊杰
++   lint：[丁俊杰](https://github.com/IOriens)
 
 ## LICENSE
 
