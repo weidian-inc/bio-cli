@@ -8,6 +8,8 @@
 
 使用 bio，您将只需关注业务逻辑，无需关注脚手架、mock 等配置信息，即可快速完成前端开发。
 
+![bio 使用前后](https://user-images.githubusercontent.com/5757051/37135330-c5b6631e-22d7-11e8-9830-6987cb980014.png)
+
 ## 安装
 
 +   安装 Node.js（>= 8.9.1）
@@ -65,6 +67,20 @@
         bio 目前准备了三个脚手架（`bio-scaffold-vue`、`bio-scaffold-react`、`bio-scaffold-pure`）
 
         **bio 使用 npm 托管脚手架，默认托管在 npm 官方源，您可自行设置托管源，[代码地址](https://github.com/weidian-inc/bio-core/blob/master/bin/cmd.js#L50)**
+
+    +   脚手架昵称
+
+        bio 为内置的三个脚手架都取了昵称：
+
+        ```
+        bio-scaffold-vue --> vue
+        bio-scaffold-react --> react
+        bio-scaffold-pure -->
+        ```
+
+        **所以所有涉及脚手架名称的命令，均可以用昵称代替。**
+
+        您也可以自行添加昵称，[代码地址](https://github.com/weidian-inc/bio-core/blob/master/bin/cmd.js#L52~L67)
 
 +   `bio run <脚手架支持的任务> [-n, --no-watch]`
 
@@ -192,6 +208,8 @@
     +   更多
 
         基于原有版本，您可开发更多强大的功能。
+
++   一张图
     
 ## 链接
 
