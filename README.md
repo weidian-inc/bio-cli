@@ -57,12 +57,14 @@
 
         该命令会完成以下动作：
 
-        +   在本地安装脚手架，以确保脚手架存在
+        +   在本地安装脚手架，以确保脚手架存在。**脚手架安装在 bio 缓存目录（`/Users/用户名/.bio/`）**
         +   如果当前目录是空目录（或只有 `README.md`），该命令会为生成 demo 文件。
 
     +   脚手架
     
         bio 目前准备了三个脚手架（`bio-scaffold-vue`、`bio-scaffold-react`、`bio-scaffold-pure`）
+
+        **bio 使用 npm 托管脚手架，默认托管在 npm 官方源，您可自行设置托管源，[代码地址](https://github.com/weidian-inc/bio-core/blob/master/bin/cmd.js#L50)**
 
 +   `bio run <脚手架支持的任务> [-n, --no-watch]`
 
@@ -102,7 +104,7 @@
 
 +   `bio scaffold show <脚手架在 npm 源上的名称>`
 
-    打开脚手架所在的本地目录
+    打开脚手架所在的本地目录。
 
 +   `bio scaffold create`
 
