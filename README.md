@@ -31,9 +31,9 @@
     ```
     
 +   第 2 步：初始化各类项目
-    +   vue 项目: `bio init bio-scaffold-vue`
-    +   react 项目: `bio-scaffold-react`
-    +   非 vue / 非 react 项目:  `bio init bio-scaffold-pure`
+    +   `bio init bio-scaffold-vue`：  初始化 vue 项目
+    +   `bio init bio-scaffold-react`：初始化 react 项目
+    +   `bio init bio-scaffold-pure`：  初始化 非 vue / 非 react 项目
 
 +   第 3 步：安装项目依赖
 
