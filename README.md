@@ -19,27 +19,18 @@
     ```
     npm install bio-cli -g
     ```
-
-+   npm 加速
-
-    因为使用过程中需要通过 npm 安装一些依赖，为提高速度：
-
-    如果你是中国用户，建议切换 npm 源为 https://registry.npm.taobao.org
-    
-    ```
-    npm config set registry https://registry.npm.taobao.org
-    ```
     
 ## 快速使用
 
 +   第 1 步：创建项目目录
 
-    `mkdir demo`
+    ```
+    mkdir demo
 
-    `cd demo`
+    cd demo
+    ```
     
 +   第 2 步：初始化各类项目
-    
     +   vue 项目: `bio init bio-scaffold-vue`
     +   react 项目: `bio-scaffold-react`
     +   非 vue / 非 react 项目:  `bio init bio-scaffold-pure`
@@ -66,7 +57,7 @@
 
         该命令会完成以下动作：
 
-        1. 在本地安装脚手架，确保脚手架存在
+        1. 在本地安装脚手架，以确保脚手架存在
         2. 如果当前目录是空目录（或只有 `README.md`），该命令会为生成 demo 文件。
 
     +   脚手架
@@ -99,13 +90,19 @@
 
     +   选项 `-n, --no-watch` 介绍：
 
-        bio 默认会 **启动** 一个文件监听服务，同步当前目录文件到脚手架目录，保证脚手架目录与业务目录始终是父子关系（[为什么要保证父子关系?](https://github.com/hoperyy/deep-webpack/issues/8)），供脚手架编译。
+        bio 默认会 **启动** 一个文件监听服务，同步当前目录文件到脚手架目录，保证脚手架目录与业务目录始终是父子关系，供脚手架编译。（资料：（[为什么要保证父子关系?](https://github.com/hoperyy/deep-webpack/issues/8)））
 
-        `-n, --no-watch` 会**关闭**同步当前目录到脚手架目录的文件监听服务
+        `-n, --no-watch` 会**关闭**同步当前目录到脚手架目录的文件监听服务。
+
+        举例：
+
+        ```
+        bio run dev-daily -n
+        ```
 
 +   `bio scaffold show <脚手架在 npm 源上的名称>`
 
-    打开脚手架所在的目录
+    打开脚手架所在的本地目录
 
 +   `bio scaffold create`
 
@@ -119,13 +116,19 @@
 
 +   `bio lint init [-t, --type [value]]`
 
-    初始化 lint，会自动在 git commit 前挂载 lint 执行钩子
+    +   功能
 
-    默认初始化 es6 规则，如果希望在某个目录初始化 es5 功能，可以进入该目录，执行：
+        初始化 lint，会自动在 git commit 前挂载 lint 执行钩子
 
-    ```
-    bio lint init -t es5
-    ```
+    +   选项 `[-t, --type [value]]` 介绍
+
+        默认初始化 es6 规则，如果希望在某个目录初始化 es5 功能，可以进入该目录，执行：
+
+        ```
+        bio lint init -t es5
+        ```
+
+        目前支持两种类型：`es5、es6`
 
 +   `bio lint [--fix] [-w, --watch]`
 
