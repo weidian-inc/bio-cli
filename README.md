@@ -10,6 +10,8 @@
 
 ![bio 使用前后](https://user-images.githubusercontent.com/5757051/37135330-c5b6631e-22d7-11e8-9830-6987cb980014.png)
 
+当前项目为 bio 客户端，bio 核心功能模块地址：[https://github.com/weidian-inc/bio-core](https://github.com/weidian-inc/bio-core)
+
 ## 安装
 
 +   安装 Node.js（>= 8.9.1）
