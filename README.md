@@ -6,7 +6,9 @@
 
 前端开发一站式解决方案。
 
-使用 bio，您将只需关注业务逻辑，无需关注脚手架配置信息，即可快速完成前端开发。额外的，bio 提供了 eslint、styleint 检测、mock 服务。
+使用 bio，您将只需关注业务逻辑，无需关注脚手架配置信息，即可快速完成前端开发。
+
+额外的，bio 提供了 eslint、styleint 检测、mock 服务。
 
 ![bio 使用前后](https://user-images.githubusercontent.com/5757051/37135330-c5b6631e-22d7-11e8-9830-6987cb980014.png)
 
