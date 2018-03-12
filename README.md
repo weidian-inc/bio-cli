@@ -18,7 +18,7 @@ github: [https://github.com/weidian-inc/bio-cli](https://github.com/weidian-inc/
 
 npm: [https://www.npmjs.com/package/bio-cli](https://www.npmjs.com/package/bio-cli)
 
-![bio 使用前后](https://user-images.githubusercontent.com/5757051/37135330-c5b6631e-22d7-11e8-9830-6987cb980014.png)
+![bio 使用前后](https://user-images.githubusercontent.com/5757051/37277015-6eb4c890-261e-11e8-8c2b-500e6eff3295.png)
 
 ## 安装
 
