@@ -10,11 +10,11 @@
 
 使用 bio，您将只需关注业务逻辑，无需关注脚手架配置信息，即可快速完成前端开发。
 
-额外的，bio 提供了 eslint、styleint 检测、mock 服务。
-
-![bio 使用前后](https://user-images.githubusercontent.com/5757051/37135330-c5b6631e-22d7-11e8-9830-6987cb980014.png)
+额外地，bio 提供了 eslint、styleint 检测、mock 服务。
 
 当前项目为 bio 客户端，bio 核心功能模块地址：[https://github.com/weidian-inc/bio-core](https://github.com/weidian-inc/bio-core)
+
+![bio 使用前后](https://user-images.githubusercontent.com/5757051/37135330-c5b6631e-22d7-11e8-9830-6987cb980014.png)
 
 ## 安装
 
@@ -51,6 +51,8 @@
 
 ## 命令集
 
+### 项目开发
+
 +   `bio init <脚手架在 npm 源上的名称>`
 
     +   功能
@@ -65,7 +67,13 @@
 
     +   脚手架
     
-        bio 目前内置了三个脚手架（`bio-scaffold-vue`、`bio-scaffold-react`、`bio-scaffold-pure`）
+        bio 目前内置了三个脚手架：
+        
+        ```
+        bio-scaffold-vue
+        bio-scaffold-react
+        bio-scaffold-pure
+        ```
 
         **bio 使用 npm 托管脚手架，默认托管在 npm 官方源，您可自行设置托管源，[代码地址](https://github.com/weidian-inc/bio-core/blob/master/bin/cmd.js#L50)**
 
@@ -96,12 +104,12 @@
         我们默认提供的三个脚手架都提供了以下 6 种任务：
         
         ```
-        dev-daily
-        dev-pre
-        dev-prod
-        build-daily
-        build-pre
-        build-prod
+        dev-daily -- 调试日常环境
+        dev-pre  -- 调试预发环境
+        dev-prod -- 调试线上环境
+        build-daily -- 打包日常环境
+        build-pre -- 打包预发环境
+        build-prod -- 打包线上环境
         ```
 
         详细信息可查看：[bio 内置脚手架任务名称](./docs/cn/目前bio可用的脚手架.md)。
@@ -121,22 +129,18 @@
         举例：
 
         ```
-        bio run dev-daily -n
+        bio run build-daily -n  打包日常环境，并关闭文件同步监听服务
         ```
-
-+   `bio scaffold show <脚手架在 npm 源上的名称>`
-
-    打开脚手架所在的本地目录。
-
-+   `bio scaffold create`
-
-    创建脚手架，会提示你新的脚手架名称
     
+### mock
+
 +   `bio mock [端口]`
 
     启动本地 mock 服务，默认端口是 7000
 
     如果希望指定端口号，可以直接指定，如：`bio mock 8000`
+
+### 代码质量
 
 +   `bio lint init [-t, --type [value]]`
 
@@ -160,6 +164,19 @@
 
     +   `--fix`：自动修正源码中的代码格式。
     +   `-w, --watch`：启动文件监听，文件一旦有变化，会触发 lint 检查
+
+### 脚手架相关
+
++   `bio scaffold show <脚手架在 npm 源上的名称>`
+
+    打开脚手架所在的本地目录。
+
++   `bio scaffold create`
+
+    创建脚手架，会提示你新的脚手架名称
+
+
+### 帮助
 
 +   `bio help`
 
