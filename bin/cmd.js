@@ -22,7 +22,7 @@ require('ensure-module-latest')({
         if (fs.existsSync(cwd)) {
             try {
                 fse.removeSync(cwd);
-            } catch(err) {
+            } catch (err) {
                 throw Error(err);
             }
         }
