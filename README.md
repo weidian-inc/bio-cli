@@ -2,6 +2,10 @@
 
 ![Mac Available](https://img.shields.io/badge/Mac-available-brightgreen.svg) ![Windows Unavailable](https://img.shields.io/badge/Windows-unavailable-red.svg) [![Node version](https://img.shields.io/badge/node-%3E%3D%208.9.1-brightgreen.svg)](http://nodejs.org/) [![Npm Version](https://img.shields.io/badge/npm-%3E%3D%205.5.1-brightgreen.svg)](https://www.npmjs.com/)
 
+github: [https://github.com/weidian-inc/bio-cli](https://github.com/weidian-inc/bio-cli)
+
+npm: [https://www.npmjs.com/package/bio-cli](https://www.npmjs.com/package/bio-cli)
+
 ## bio 是什么
 
 **注意：bio 目前只兼容 Mac 平台**
@@ -11,10 +15,6 @@ bio 是一个命令行，提供了前端开发一站式解决方案。
 使用 bio，您将只需关注业务逻辑，无需关注脚手架配置信息，即可快速完成前端开发。
 
 额外地，bio 提供了 eslint、styleint 检测、mock 服务。
-
-github: [https://github.com/weidian-inc/bio-cli](https://github.com/weidian-inc/bio-cli)
-
-npm: [https://www.npmjs.com/package/bio-cli](https://www.npmjs.com/package/bio-cli)
 
 ![bio 使用前后](https://user-images.githubusercontent.com/5757051/37277015-6eb4c890-261e-11e8-8c2b-500e6eff3295.png)
 
