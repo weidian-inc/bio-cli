@@ -18,10 +18,6 @@ npm: [https://www.npmjs.com/package/bio-cli](https://www.npmjs.com/package/bio-c
 
 ![bio 使用前后](https://user-images.githubusercontent.com/5757051/37277015-6eb4c890-261e-11e8-8c2b-500e6eff3295.png)
 
-## 代码结构
-
-当前项目为 bio 客户端，bio 核心功能模块地址：[https://github.com/weidian-inc/bio-core](https://github.com/weidian-inc/bio-core)
-
 ## 安装
 
 +   安装 Node.js（>= 8.9.1）
@@ -33,7 +29,7 @@ npm: [https://www.npmjs.com/package/bio-cli](https://www.npmjs.com/package/bio-c
     ```
     npm install bio-cli -g
     ```
-    
+
 ## 快速使用
 
 +   第 1 步：创建项目目录
@@ -194,6 +190,11 @@ npm: [https://www.npmjs.com/package/bio-cli](https://www.npmjs.com/package/bio-c
 ![](https://user-images.githubusercontent.com/5757051/37135599-e5dc2c2c-22d8-11e8-8953-8ef2a2441bc7.png)
 
 ![](https://user-images.githubusercontent.com/5757051/37135550-abf1fd0c-22d8-11e8-8c2e-218be599a33d.png)
+
+## 代码结构
+
+当前项目为 bio 客户端，bio 核心功能模块地址：[https://github.com/weidian-inc/bio-core](https://github.com/weidian-inc/bio-core)
+
     
 ## 链接
 
