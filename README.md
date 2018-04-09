@@ -6,19 +6,21 @@
 
 **注意：bio 目前只兼容 Mac 平台**
 
-前端开发一站式解决方案。
+bio 是一个命令行，提供了前端开发一站式解决方案。
 
 使用 bio，您将只需关注业务逻辑，无需关注脚手架配置信息，即可快速完成前端开发。
 
 额外地，bio 提供了 eslint、styleint 检测、mock 服务。
-
-当前项目为 bio 客户端，bio 核心功能模块地址：[https://github.com/weidian-inc/bio-core](https://github.com/weidian-inc/bio-core)
 
 github: [https://github.com/weidian-inc/bio-cli](https://github.com/weidian-inc/bio-cli)
 
 npm: [https://www.npmjs.com/package/bio-cli](https://www.npmjs.com/package/bio-cli)
 
 ![bio 使用前后](https://user-images.githubusercontent.com/5757051/37277015-6eb4c890-261e-11e8-8c2b-500e6eff3295.png)
+
+## 代码结构
+
+当前项目为 bio 客户端，bio 核心功能模块地址：[https://github.com/weidian-inc/bio-core](https://github.com/weidian-inc/bio-core)
 
 ## 安装
 
@@ -43,11 +45,12 @@ npm: [https://www.npmjs.com/package/bio-cli](https://www.npmjs.com/package/bio-c
     ```
     
 +   第 2 步：初始化各类项目
+
     +   `bio init bio-scaffold-vue`：  初始化 vue 项目
     +   `bio init bio-scaffold-react`：初始化 react 项目
     +   `bio init bio-scaffold-pure`：  初始化 非 vue / 非 react 项目
     
-+   第 3 步：调试
++   第 3 步：启动任务 `dev-daily`
     
     ```
     bio run dev-daily
