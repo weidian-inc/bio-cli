@@ -56,9 +56,9 @@ bio is a command cli tool for:
 
 ## Orders
 
-### (1) Init project
+### init project: `bio init <scaffoldName in npm registry | scaffold short name>`
 
-+   order: `bio init <scaffoldName in npm registry | scaffold short name>`
++   description
 
     It will:
     
@@ -92,36 +92,37 @@ bio is a command cli tool for:
 
     init a pure project: `bio init bio-scaffold-pure` or `bio init pure`
 
-## (2) Run project
+## run project: `bio run <taskName that scaffold supports> [-n, --no-watch]`
 
-+   order: `bio run <taskName that scaffold supports> [-n, --no-watch]`
++   description
 
     It will run task that is only supported by scaffold, which was defined in `bio init <scaffoldName>`.
 
-+   param: `<taskName that scaffold supports>`
++   param
+    +   `<taskName that scaffold supports>`
 
-    By default, these tasks are supported in bio inside scaffolds as list:
+        By default, these tasks are supported in bio inside scaffolds as list:
 
-    +   `dev-daily`: develop in daily envioronment.
-    +   `dev-pre`: develop in re envioronment.
-    +   `dev-prod`: develop in prod envioronment.
-    +   `build-daily`: build in daily envioronment.
-    +   `build-pre`: build in pre envioronment.
-    +   `build-prod`: build in prod envioronment.
+        +   `dev-daily`: develop in daily envioronment.
+        +   `dev-pre`: develop in re envioronment.
+        +   `dev-prod`: develop in prod envioronment.
+        +   `build-daily`: build in daily envioronment.
+        +   `build-pre`: build in pre envioronment.
+        +   `build-prod`: build in prod envioronment.
 
-+   `-n, --no-watch`
+    +   `-n, --no-watch`
 
-    `bio` will lanch a local server to watch file changes by default.
+        `bio` will lanch a local server to watch file changes by default.
 
-    `-n, --no-watch` will close this server.
+        `-n, --no-watch` will close this server.
 
-    example:
+    +   examples
 
-    `bio run build-daily -n`: command line will exit after task `build-daily` finished.
+        +   run task `dev-daily` and watch file changes: `bio run dev-daily`
+        +   run task `dev-daily` and don't watch file changes: `bio run dev-daily -n`
+        +   run task `build-daily` and don't watch file changes: `bio run build-daily -n`
     
-### (3) mock
-
-+   `bio mock [port]`
+### mock: `bio mock [port]`
 
     `bio` will lanch a local mock server and create a test file named as `./mock/test.json`.
 
@@ -133,7 +134,7 @@ bio is a command cli tool for:
     bio mock 8000
     ```
 
-### (4) lint
+### lint
 
 +   `bio lint init [-t, --type [value]]`
 
@@ -151,7 +152,7 @@ bio is a command cli tool for:
     +   auto fixing and watching file changes: `bio lint --fix -w`
     +   not auto fixing and watching file changes: `bio lint -w`
 
-### (5) help
+### help
 
 +   `bio help`
 
