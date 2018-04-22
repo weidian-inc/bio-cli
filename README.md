@@ -56,7 +56,7 @@ bio is a command cli tool for:
 
 ## Orders
 
-### init project: `bio init <scaffoldName in npm registry | scaffold short name>`
+### `bio init <scaffoldName in npm registry | scaffold short name>`
 
 +   description
 
@@ -92,7 +92,7 @@ bio is a command cli tool for:
 
     init a pure project: `bio init bio-scaffold-pure` or `bio init pure`
 
-## run project: `bio run <taskName that scaffold supports> [-n, --no-watch]`
+### `bio run <taskName that scaffold supports> [-n, --no-watch]`
 
 +   description
 
@@ -122,7 +122,7 @@ bio is a command cli tool for:
         +   run task `dev-daily` and don't watch file changes: `bio run dev-daily -n`
         +   run task `build-daily` and don't watch file changes: `bio run build-daily -n`
     
-### mock: `bio mock [port]`
+### `bio mock [port]`
 
     `bio` will lanch a local mock server and create a test file named as `./mock/test.json`.
 
@@ -152,9 +152,9 @@ bio is a command cli tool for:
     +   auto fixing and watching file changes: `bio lint --fix -w`
     +   not auto fixing and watching file changes: `bio lint -w`
 
-### help
+### `bio help`
 
-+   `bio help`
+It will show helps.
 
 ## TODO
 
