@@ -116,39 +116,39 @@ bio is a command cli tool for:
 
         `-n, --no-watch` will close this server.
 
-    +   examples
++   examples
 
-        +   run task `dev-daily` and watch file changes: `bio run dev-daily`
-        +   run task `dev-daily` and don't watch file changes: `bio run dev-daily -n`
-        +   run task `build-daily` and don't watch file changes: `bio run build-daily -n`
+    +   run task `dev-daily` and watch file changes: `bio run dev-daily`
+    +   run task `dev-daily` and don't watch file changes: `bio run dev-daily -n`
+    +   run task `build-daily` and don't watch file changes: `bio run build-daily -n`
     
 ### `bio mock [port]`
 
-    `bio` will lanch a local mock server and create a test file named as `./mock/test.json`.
+`bio` will lanch a local mock server and create a test file named as `./mock/test.json`.
 
-    `7000` is the default server port, and it can be changed by offering port.
+`7000` is the default server port, and it can be changed by offering port.
 
-    example:
+example:
 
-    ```
-    bio mock 8000
-    ```
+```
+bio mock 8000
+```
 
 ### `bio lint init [-t, --type [value]]`
 
-    examples:
+examples:
 
-    +   init es6 rules: `bio lint init`
-    +   init es5 rules: `bio lint init -t es5`
++   init es6 rules: `bio lint init`
++   init es5 rules: `bio lint init -t es5`
 
 ### `bio lint [--fix] [-w, --watch]`
 
-    examples:
+examples:
 
-    +   auto fixing and only run once: `bio lint --fix`
-    +   not auto fixing and only run once: `bio lint`
-    +   auto fixing and watching file changes: `bio lint --fix -w`
-    +   not auto fixing and watching file changes: `bio lint -w`
++   auto fixing and only run once: `bio lint --fix`
++   not auto fixing and only run once: `bio lint`
++   auto fixing and watching file changes: `bio lint --fix -w`
++   not auto fixing and watching file changes: `bio lint -w`
 
 ### `bio help`
 
