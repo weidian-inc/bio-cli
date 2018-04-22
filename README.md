@@ -6,33 +6,35 @@ github: [https://github.com/weidian-inc/bio-cli](https://github.com/weidian-inc/
 
 npm: [https://www.npmjs.com/package/bio-cli](https://www.npmjs.com/package/bio-cli)
 
-## bio 是什么
+**Mac only till now**
 
-**注意：bio 目前只兼容 Mac 平台**
+## What is bio ?
 
-bio 是一个命令行，提供了前端开发一站式解决方案。
+bio is a command cli tool for:
 
-使用 bio，您将只需关注业务逻辑，无需关注脚手架配置信息，即可快速完成前端开发。
-
-额外地，bio 提供了 eslint、styleint 检测、mock 服务。
++   creating project demo files
++   compiling project without configuring
++   stylelint / eslint
++   local mock
++   ...
 
 ![bio 使用前后](https://user-images.githubusercontent.com/5757051/37277015-6eb4c890-261e-11e8-8c2b-500e6eff3295.png)
 
-## 安装
+## Installation
 
-+   安装 Node.js（>= 8.9.1）
++   Node.js（>= 8.9.1）
 
     https://nodejs.org/en/download/
 
-+   安装 bio
++   bio
 
     ```
-    npm install bio-cli -g
+    [sudo] npm install bio-cli -g
     ```
 
-## 快速使用
+## Fast use
 
-+   第 1 步：创建项目目录
++   step1: make a blank directory `demo`
 
     ```
     mkdir demo
@@ -40,178 +42,129 @@ bio 是一个命令行，提供了前端开发一站式解决方案。
     cd demo
     ```
     
-+   第 2 步：初始化各类项目
++   step2: init project of different types
 
-    +   `bio init bio-scaffold-vue`：  初始化 vue 项目
-    +   `bio init bio-scaffold-react`：初始化 react 项目
-    +   `bio init bio-scaffold-pure`：  初始化 非 vue / 非 react 项目
+    +   `bio init bio-scaffold-vue`: init `vue` project
+    +   `bio init bio-scaffold-react`: init `react` project
+    +   `bio init bio-scaffold-pure`: init project of other types
     
-+   第 3 步：启动任务 `dev-daily`
++   step3: run task `dev-daily`
     
     ```
     bio run dev-daily
     ```
 
-## 命令集
+## Orders
 
-### （1）项目开发
+### (1) Init project
 
-+   `bio init <脚手架在 npm 源上的名称>`
++   order: `bio init <scaffoldName in npm registry | scaffold short name>`
 
-    +   功能
-
-        初始化项目目录。
-
-        该命令会完成以下动作：
-
-        +   在本地安装脚手架，以确保脚手架存在。**脚手架安装在 bio 缓存目录（`/Users/用户名/.bio/`）**
-        +   如果当前目录是空目录（或只有 `README.md`），该命令会为生成 demo 文件。
-        +   执行 `npm install`。
-
-    +   脚手架
+    It will:
     
-        bio 目前内置了三个脚手架：
-        
-        ```
-        bio-scaffold-vue
-        bio-scaffold-react
-        bio-scaffold-pure
-        ```
+    +   init project files in current directory.
+    +   run `npm install` automatically.
 
-        **bio 使用 npm 托管脚手架，默认托管在 npm 官方源，您可自行设置托管源，[代码地址](https://github.com/weidian-inc/bio-core/blob/master/bin/cmd.js#L50)**
++   params
+    +   `scaffoldName in npm registry`
 
-    +   脚手架昵称
+        bio will search for scaffoldName from npm registry
 
-        bio 为内置的三个脚手架都取了昵称：
+    +   `scaffold short name`
 
-        ```
-        bio-scaffold-vue --> vue
-        bio-scaffold-react --> react
-        bio-scaffold-pure --> pure
-        ```
+        By default, bio provides shortName for scaffolds in npm as list:
 
-        **所以所有涉及脚手架名称的命令，均可以用昵称代替。**
+        +   `vue` for `bio-scaffold-vue`
+        +   `react` for `bio-scaffold-react`
+        +   `pure` for `bio-scaffold-pure`
 
-        您也可以自行添加昵称，[代码地址](https://github.com/weidian-inc/bio-core/blob/master/bin/cmd.js#L52~L67)
++   bio inside scaffold
 
-+   `bio run <脚手架支持的任务> [-n, --no-watch]`
+    +   `bio-scaffold-vue`: for vue project
+    +   `bio-scaffold-react`: for react project
+    +   `bio-scaffold-pure`: for pure project
 
-    +   功能
++   examples
 
-        启动脚手架任务。
+    init a vue project: `bio init bio-scaffold-vue` or `bio init vue`
 
-        bio 会启动脚手架，并透传任务名称到脚手架，以完成各类任务。
+    init a react project: `bio init bio-scaffold-react` or `bio init react`
 
-        所以，任务名称是可变的，只要脚手架支持就可以。
+    init a pure project: `bio init bio-scaffold-pure` or `bio init pure`
 
-        我们默认提供的三个脚手架都提供了以下 6 种任务：
-        
-        ```
-        dev-daily -- 调试日常环境
-        dev-pre  -- 调试预发环境
-        dev-prod -- 调试线上环境
-        build-daily -- 打包日常环境
-        build-pre -- 打包预发环境
-        build-prod -- 打包线上环境
-        ```
+## (2) Run project
 
-        详细信息可查看：[bio 内置脚手架任务名称](./docs/cn/目前bio可用的脚手架.md)。
++   order: `bio run <taskName that scaffold supports> [-n, --no-watch]`
 
-        举例：初始化完 `bio-scaffold-vue` 项目后，启动它的 `dev-daily` 任务，命令即为：
+    It will run task that is only supported by scaffold, which was defined in `bio init <scaffoldName>`.
 
-        ```
-        bio run dev-daily
-        ```
++   param: `<taskName that scaffold supports>`
 
-    +   选项 `-n, --no-watch` 介绍：
+    By default, these tasks are supported in bio inside scaffolds as list:
 
-        bio 默认会 **启动** 一个文件监听服务，同步当前目录文件到脚手架目录，保证脚手架目录与业务目录始终是父子关系，供脚手架编译。（资料：（[为什么要保证父子关系?](https://github.com/hoperyy/deep-webpack/issues/8)））
+    +   `dev-daily`: develop in daily envioronment.
+    +   `dev-pre`: develop in re envioronment.
+    +   `dev-prod`: develop in prod envioronment.
+    +   `build-daily`: build in daily envioronment.
+    +   `build-pre`: build in pre envioronment.
+    +   `build-prod`: build in prod envioronment.
 
-        `-n, --no-watch` 会**关闭**同步当前目录到脚手架目录的文件监听服务。
++   `-n, --no-watch`
 
-        举例：
+    `bio` will lanch a local server to watch file changes by default.
 
-        ```
-        bio run build-daily -n  打包日常环境，并关闭文件同步监听服务
-        ```
+    `-n, --no-watch` will close this server.
+
+    example:
+
+    `bio run build-daily -n`: command line will exit after task `build-daily` finished.
     
-### （2）mock
+### (3) mock
 
-+   `bio mock [端口]`
++   `bio mock [port]`
 
-    启动本地 mock 服务，默认端口是 7000
+    `bio` will lanch a local mock server and create a test file named as `./mock/test.json`.
 
-    如果希望指定端口号，可以直接指定，如：`bio mock 8000`
+    `7000` is the default server port, and it can be changed by offering port.
 
-### （3）代码质量
+    example:
+
+    ```
+    bio mock 8000
+    ```
+
+### (4) lint
 
 +   `bio lint init [-t, --type [value]]`
 
-    +   功能
+    examples:
 
-        初始化 lint，会自动在 git commit 前挂载 lint 执行钩子
-
-    +   选项 `[-t, --type [value]]` 介绍
-
-        默认初始化 es6 规则，如果希望在某个目录初始化 es5 功能，可以进入该目录，执行：
-
-        ```
-        bio lint init -t es5
-        ```
-
-        目前支持两种类型：`es5、es6`
+    +   init es6 rules: `bio lint init`
+    +   init es5 rules: `bio lint init -t es5`
 
 +   `bio lint [--fix] [-w, --watch]`
 
-    执行 lint 检查，bio 会为你生成 lint 结果页面进行查看
+    examples:
 
-    +   `--fix`：自动修正源码中的代码格式。
-    +   `-w, --watch`：启动文件监听，文件一旦有变化，会触发 lint 检查
+    +   auto fixing and only run once: `bio lint --fix`
+    +   not auto fixing and only run once: `bio lint`
+    +   auto fixing and watching file changes: `bio lint --fix -w`
+    +   not auto fixing and watching file changes: `bio lint -w`
 
-### （4）脚手架相关
-
-+   `bio scaffold show <脚手架在 npm 源上的名称>`
-
-    打开脚手架所在的本地目录。
-
-+   `bio scaffold create`
-
-    创建脚手架，会提示你新的脚手架名称
-
-
-### （5）帮助
+### (5) help
 
 +   `bio help`
 
-    help 信息
-
-## bio 的特点
-
-![](https://user-images.githubusercontent.com/5757051/37135599-e5dc2c2c-22d8-11e8-8953-8ef2a2441bc7.png)
-
-![](https://user-images.githubusercontent.com/5757051/37135550-abf1fd0c-22d8-11e8-8c2e-218be599a33d.png)
-
-## 代码结构
-
-当前项目为 bio 客户端，bio 核心功能模块地址：[https://github.com/weidian-inc/bio-core](https://github.com/weidian-inc/bio-core)
-
-    
-## 链接
-
-+   [目前可用的脚手架](./docs/cn/目前bio可用的脚手架.md)
-+   [开发 bio 脚手架](./docs/cn/开发bio脚手架.md)
-
 ## TODO
 
-+   完善单元测试
-+   持续集成
-+   English Docs
-+   完善脚手架项目 demo
++   add unitests
++   CI
++   complex demos
 
-## 开发者
+## Contributors
 
-+   Core：[刘远洋](https://github.com/hoperyy)
-+   Lint：[丁俊杰](https://github.com/IOriens)
++   Core：[hoperyy](https://github.com/hoperyy)
++   Lint：[IOriens](https://github.com/IOriens)
 
 ## LICENSE
 
