@@ -6,7 +6,7 @@ github: [https://github.com/weidian-inc/bio-cli](https://github.com/weidian-inc/
 
 npm: [https://www.npmjs.com/package/bio-cli](https://www.npmjs.com/package/bio-cli)
 
-**Mac only till now**
+**Attention: Mac only for now**
 
 ## What is bio ?
 
@@ -18,7 +18,7 @@ bio is a command cli tool for:
 +   local mock
 +   ...
 
-![bio 使用前后](https://user-images.githubusercontent.com/5757051/37277015-6eb4c890-261e-11e8-8c2b-500e6eff3295.png)
+![bio 使用前后](https://user-images.githubusercontent.com/5757051/39090832-85175356-461b-11e8-9cd7-7a739165c18f.png)
 
 ## Installation
 
