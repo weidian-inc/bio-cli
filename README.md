@@ -134,16 +134,14 @@ bio is a command cli tool for:
     bio mock 8000
     ```
 
-### lint
-
-+   `bio lint init [-t, --type [value]]`
+### `bio lint init [-t, --type [value]]`
 
     examples:
 
     +   init es6 rules: `bio lint init`
     +   init es5 rules: `bio lint init -t es5`
 
-+   `bio lint [--fix] [-w, --watch]`
+### `bio lint [--fix] [-w, --watch]`
 
     examples:
 
