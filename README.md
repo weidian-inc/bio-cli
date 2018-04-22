@@ -34,7 +34,7 @@ bio is a command cli tool for:
 
 ## Fast use
 
-+   step1: make a blank directory `demo`
+1. make a blank directory `demo`
 
     ```
     mkdir demo
@@ -42,13 +42,13 @@ bio is a command cli tool for:
     cd demo
     ```
     
-+   step2: init project of different types
+2. init project of different types
 
     +   `bio init bio-scaffold-vue`: init `vue` project
     +   `bio init bio-scaffold-react`: init `react` project
     +   `bio init bio-scaffold-pure`: init project of other types
     
-+   step3: run task `dev-daily`
+3. run task `dev-daily`
     
     ```
     bio run dev-daily
