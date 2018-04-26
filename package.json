@@ -1,6 +1,6 @@
 {
     "name": "bio-cli",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "bio-cli",
     "dependencies": {
         "commander": "^2.11.0",

@@ -134,12 +134,11 @@ example:
 bio mock 8000
 ```
 
-### `bio lint init [-t, --type [value]]`
+### `bio lint init`
 
-examples:
-
-+   init es6 rules: `bio lint init`
-+   init es5 rules: `bio lint init -t es5`
+```
+bio lint init
+```
 
 ### `bio lint [--fix] [-w, --watch]`
 
