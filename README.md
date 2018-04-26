@@ -44,9 +44,9 @@ bio is a command cli tool for:
     
 2. init project of different types
 
-    +   `bio init bio-scaffold-vue`: init `vue` project
-    +   `bio init bio-scaffold-react`: init `react` project
-    +   `bio init bio-scaffold-pure`: init project of other types
+    +   `bio init vue`: init `vue` project
+    +   `bio init react`: init `react` project
+    +   `bio init pure`: init project of other types
     
 3. run task `dev-daily`
     
