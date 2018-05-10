@@ -32,7 +32,7 @@ bio is a command cli tool for:
     [sudo] npm install bio-cli -g
     ```
 
-## Fast use
+## Quick use
 
 1. make a blank directory `demo`
 
