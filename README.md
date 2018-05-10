@@ -54,7 +54,7 @@ bio is a command cli tool for:
     bio run dev-daily
     ```
 
-## Orders
+## Commands
 
 ### `bio init <scaffoldName in npm registry | scaffold short name>`
 
