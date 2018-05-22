@@ -78,12 +78,6 @@ bio is a command cli tool for:
         +   `react` for `bio-scaffold-react`
         +   `pure` for `bio-scaffold-pure`
 
-+   bio inside scaffold
-
-    +   `bio-scaffold-vue`: for vue project
-    +   `bio-scaffold-react`: for react project
-    +   `bio-scaffold-pure`: for pure project
-
 +   examples
 
     init a vue project: `bio init bio-scaffold-vue` or `bio init vue`
