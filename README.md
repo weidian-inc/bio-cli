@@ -152,6 +152,7 @@ It will show helps.
 +   add unitests
 +   CI
 +   complex demos
++   website built by vuepress
 
 ## Contributors
 
