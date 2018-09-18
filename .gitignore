@@ -1,0 +1,5 @@
+.git/
+.idea/
+.DS_Store
+node_modules/*
+lint-result/*
