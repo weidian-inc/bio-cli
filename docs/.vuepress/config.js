@@ -8,5 +8,5 @@ module.exports = {
             { text: 'Dev Scaffold', link: '/dev-scaffold/' }
         ]
     },
-    base: 'bio-cli'
+    base: '/bio-cli/'
 }
