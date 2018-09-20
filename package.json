@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/weidian-inc/bio-cli#readme",
   "dependencies": {
+    "fs-extra": "^7.0.0",
+    "on-build-webpack": "^0.1.0",
     "vuepress": "^0.14.4"
   }
 }

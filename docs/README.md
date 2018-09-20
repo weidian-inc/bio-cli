@@ -1,5 +1,3 @@
-# bio-cli
-
 ![Mac Available](https://img.shields.io/badge/Mac-available-brightgreen.svg) ![Windows Unavailable](https://img.shields.io/badge/Windows-unavailable-red.svg) [![Node version](https://img.shields.io/badge/node-%3E%3D%208.9.1-brightgreen.svg)](http://nodejs.org/) [![Npm Version](https://img.shields.io/badge/npm-%3E%3D%205.5.1-brightgreen.svg)](https://www.npmjs.com/)
 
 github: [https://github.com/weidian-inc/bio-cli](https://github.com/weidian-inc/bio-cli)
@@ -8,7 +6,7 @@ npm: [https://www.npmjs.com/package/bio-cli](https://www.npmjs.com/package/bio-c
 
 **Attention: Mac only for now**
 
-## What is bio-cli ?
+# What is bio-cli ?
 
 bio is a command cli tool for:
 
@@ -20,7 +18,7 @@ bio is a command cli tool for:
 
 ![before and after](https://user-images.githubusercontent.com/5757051/39090832-85175356-461b-11e8-9cd7-7a739165c18f.png)
 
-## Installation
+# Installation
 
 +   Node.js（>= 8.9.1）
 
@@ -32,7 +30,7 @@ bio is a command cli tool for:
     [sudo] npm install bio-cli -g
     ```
 
-## Quick Start
+# Quick Start
 
 1. make a blank directory `demo`
 
@@ -54,17 +52,17 @@ bio is a command cli tool for:
     bio run dev-daily
     ```
 
-## TODO
+# TODO
 
 +   add unitests
 +   CI
 +   complex demos
 
-## Contributors
+# Contributors
 
 +   Core：[hoperyy](https://github.com/hoperyy)
 +   Lint：[IOriens](https://github.com/IOriens)
 
-## LICENSE
+# LICENSE
 
 MIT
