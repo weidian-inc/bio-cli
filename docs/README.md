@@ -14,7 +14,6 @@ bio is a command cli tool for:
 +   compiling project without configuring
 +   stylelint / eslint
 +   local mock
-+   ...
 
 ![before and after](https://user-images.githubusercontent.com/5757051/39090832-85175356-461b-11e8-9cd7-7a739165c18f.png)
 
@@ -26,7 +25,7 @@ bio is a command cli tool for:
 
 +   bio-cli
 
-    ```
+    ```bash
     [sudo] npm install bio-cli -g
     ```
 
@@ -48,7 +47,7 @@ bio is a command cli tool for:
     
 3. run task `dev-daily`
     
-    ```
+    ```bash
     bio run dev-daily
     ```
 
