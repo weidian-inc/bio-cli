@@ -78,19 +78,23 @@ bio mock [port]
 
 example:
 
-```
+```bash
 bio mock 8000
 ```
 
 # Lint
 
-+   `bio lint init`
++   init lint config
 
     ```bash
     bio lint init
     ```
 
-+   `bio lint [--fix] [-w, --watch]`
++   run lint
+
+    ```bash
+    bio lint [--fix] [-w, --watch]
+    ```
 
     examples:
 
