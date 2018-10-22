@@ -12,21 +12,16 @@ const path = require('path');
 const fse = require('fs-extra');
 const commander = require('commander');
 
-const cacheDir = path.join(process.env.HOME, '.bio/bio-core-module');
+const cacheFolder = path.join(process.env.HOME, '.bio');
 
-require('ensure-module-latest')({
-    moduleName: 'bio-core',
-    cwd: cacheDir,
-    registry: 'https://registry.npmjs.org/',
-    beforeInstall(cwd) {
-        if (fs.existsSync(cwd)) {
-            try {
-                fse.removeSync(cwd);
-            } catch (err) {
-                throw Error(err);
-            }
-        }
-    },
-}).then((modulePath) => {
-    require(modulePath)(commander);
+const packageName = 'bio-core';
+const targetFolder = path.join(cacheFolder, 'bio-cmd');
+
+require('hot-update-package')({
+    packageName,
+    cacheFolder: path.join(cacheFolder, 'bio-core-update-package-cache'),
+    targetFolder: targetFolder,
+    callback() {
+        require(`${path.join(targetFolder, 'node_modules', packageName)}/bin/cmd`)(commander);
+    }
 });
