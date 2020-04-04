@@ -21,6 +21,7 @@ require('hot-update-package')({
     packageName,
     cacheFolder: path.join(cacheFolder, 'bio-core-update-package-cache'),
     targetFolder: targetFolder,
+    silent: false,
     callback() {
         require(`${path.join(targetFolder, 'node_modules', packageName)}/bin/cmd`)(commander);
     }
