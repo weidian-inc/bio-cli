@@ -4,7 +4,7 @@
     "description": "bio-cli",
     "dependencies": {
         "commander": "^2.19.0",
-        "hot-update-package": "^1.0.7"
+        "hot-update-package": "^1.0.8"
     },
     "scripts": {
         "lint": "eslint bin/**"
