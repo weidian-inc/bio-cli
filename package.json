@@ -4,6 +4,7 @@
     "description": "bio-cli",
     "dependencies": {
         "commander": "^2.19.0",
+        "fs-extra": "^2.1.1",
         "hot-update-package": "^1.0.8"
     },
     "scripts": {
@@ -15,7 +16,8 @@
         "build"
     ],
     "bin": {
-        "bio": "./bin/cmd.js"
+        "bio": "./bin/cmd.js",
+        "bio-test": "./bin/cmd-test.js"
     },
     "engines": {
         "node": ">=8.9.1"
